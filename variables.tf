@@ -11,9 +11,9 @@ variable "label_order" {
 }
 
 variable "project_id" {
-  description = "(Optional) The ID of the project in which the resource belongs. If it is not set, the provider project is used."
   type        = string
   default     = null
+  description = "(Optional) The ID of the project in which the resource belongs. If it is not set, the provider project is used."
 }
 
 variable "name" {

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - devops
+
 jobs:
   DNS:
     name: 'Terratest for DNS'

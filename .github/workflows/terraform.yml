@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - devops
+
 jobs:
   versionExtract:
     name: Get min/max versions

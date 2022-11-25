@@ -1,12 +1,12 @@
 // Managed By : CloudDrove
-// Description : This Terratest is used to test the Terraform storage module.
+// Description : This terratest is used to test the Terraform VPC module.
 // Copyright @ CloudDrove. All Right Reserved.
 package test
 
 import (
 	"testing"
-	"github.com/stretchr/testify/assert"
 	"github.com/gruntwork-io/terratest/modules/terraform"
+	"github.com/stretchr/testify/assert"
 )
 
 func Test(t *testing.T) {
@@ -14,8 +14,7 @@ func Test(t *testing.T) {
 
 	terraformOptions := &terraform.Options{
 		// Source path of Terraform directory.
-		TerraformDir: "../../_example",
-		Upgrade: true,
+		TerraformDir: "../_example",
 	}
 
 	// This will run 'terraform init' and 'terraform application' and will fail the test if any errors occur
@@ -25,9 +24,9 @@ func Test(t *testing.T) {
 	defer terraform.Destroy(t, terraformOptions)
 
 	// To get the value of an output variable, run 'terraform output'
-	storageBucketId := strings.Join(terraform.OutputList(t, terraformOptions, "id")," ")
 	Tags := terraform.OutputMap(t, terraformOptions, "tags")
 
-	// Verify we're getting back the outputs we expect
-	assert.Equal(t, "clouddrove-storage-bucket-test", Tags["Name"])
+	// Check that we get back the outputs that we expect
+	assert.Equal(t, "vpc-test", Tags["Name"])
+
 }

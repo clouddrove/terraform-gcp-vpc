@@ -2,7 +2,7 @@ name: 'Terratest GitHub Actions'
 on:
   push:
     branches:
-      - devops
+      - Devops
 
 jobs:
   DNS:

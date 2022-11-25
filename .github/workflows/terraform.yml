@@ -3,7 +3,7 @@ name: static-checks
 on:
   push:
     branches:
-      - devops
+      - Devops
 
 jobs:
   versionExtract:

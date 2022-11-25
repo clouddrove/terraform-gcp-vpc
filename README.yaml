@@ -42,8 +42,7 @@ usage: |-
   Here is an example of how you can use this module in your inventory structure:
     ```hcl
   module "vpc" {
-  source = "clouddrove/vpc/google"
-  version     = "1.0.0"
+  source = "../"
 
   name        = "vpc"
   environment = var.environment
@@ -58,4 +57,4 @@ usage: |-
   enable_ula_internal_ipv6        = false
 
 }
-```
+    ```

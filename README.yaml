@@ -30,7 +30,7 @@ badges:
 
 #  description of this project
 description: |-
-  Terraform module to create default storage bucket with.
+  Terraform module to create VPC resource on google.
 # extra content
 include:
   - "terraform.md"
@@ -56,5 +56,5 @@ usage: |-
   delete_default_routes_on_create = true
   enable_ula_internal_ipv6        = false
 
-}
-  ```
+ }
+```

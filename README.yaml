@@ -5,13 +5,13 @@
 #
 
 # Name of this project
-name : Terraform gcp vpc
+name : Terraform gcp storage
 
 # License of this project
 license: "APACHE"
 
 # Canonical GitHub repo
-github_repo: clouddrove/terraform-gcp-vpc
+github_repo: clouddrove/terraform-gcp-storage
 
 # Badges to display
 badges:
@@ -22,11 +22,11 @@ badges:
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
   - name: "tfsec"
-    image: "https://github.com/clouddrove/terraform-gcp-vpc/actions/workflows/tfsec.yml/badge.svg"
-    url: "https://github.com/clouddrove/terraform-gcp-vpc/actions/workflows/tfsec.yml"
+    image: "https://github.com/clouddrove/terraform-gcp-storage/actions/workflows/tfsec.yml/badge.svg"
+    url: "https://github.com/clouddrove/terraform-gcp-storage/actions/workflows/tfsec.yml"
   - name: "static-checks"
-    image: "https://github.com/clouddrove/terraform-gcp-vpc/actions/workflows/terraform.yml/badge.svg"
-    url: "https://github.com/clouddrove/terraform-gcp-vpc/actions/workflows/terraform.yml"
+    image: "https://github.com/clouddrove/terraform-gcp-storage/actions/workflows/terraform.yml/badge.svg"
+    url: "https://github.com/clouddrove/terraform-gcp-storage/actions/workflows/terraform.yml"
 
 #  description of this project
 description: |-
@@ -38,9 +38,9 @@ include:
 # How to use this project
 # How to use this project
 usage: |-
-  ### Simple Example
-  Here is an example of how you can use this module in your inventory structure:
-    ```hcl
+  Here are some examples of how you can use this module in your inventory structure:
+  ### Default Bucket
+  ```hcl
   module "vpc" {
   source = "../"
 
@@ -57,4 +57,4 @@ usage: |-
   enable_ula_internal_ipv6        = false
 
 }
-    ```
+  ```

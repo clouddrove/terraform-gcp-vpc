@@ -56,5 +56,5 @@ usage: |-
   delete_default_routes_on_create = true
   enable_ula_internal_ipv6        = false
 
- }
+}
 ```

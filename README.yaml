@@ -42,7 +42,8 @@ usage: |-
   ### Default vpc
   ```hcl
   module "vpc" {
-   source = "../"
+  source = "clouddrove/storage/google"
+  version     = "1.0.0"
 
    name        = "vpc"
    environment = var.environment

@@ -39,7 +39,7 @@ include:
 # How to use this project
 usage: |-
   Here are some examples of how you can use this module in your inventory structure:
-  ### Default Bucket
+  ### Default vpc
   ```hcl
   module "vpc" {
    source = "../"

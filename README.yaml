@@ -42,7 +42,7 @@ usage: |-
   ### Default vpc
   ```hcl
   module "vpc" {
-  source = "clouddrove/storage/google"
+  source = "clouddrove/vpc/google"
   version     = "1.0.0"
 
    name        = "vpc"

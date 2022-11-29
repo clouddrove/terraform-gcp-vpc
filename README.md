@@ -78,7 +78,8 @@ Here are some examples of how you can use this module in your inventory structur
 ### Default vpc
 ```hcl
 module "vpc" {
- source = "../"
+source = "clouddrove/vpc/google"
+version     = "1.0.0"
 
  name        = "vpc"
  environment = var.environment

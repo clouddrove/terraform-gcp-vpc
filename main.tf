@@ -1,6 +1,6 @@
 module "labels" {
-  source      = "clouddrove/labels/gcp"
-  version     = "1.0.0"
+  source  = "clouddrove/labels/gcp"
+  version = "1.0.0"
 
   name        = var.name
   environment = var.environment
@@ -22,4 +22,18 @@ resource "google_compute_network" "vpc" {
   internal_ipv6_range             = var.internal_ipv6_range
 
   depends_on = [var.module_depends_on]
+}
+
+# shared_vpc_resource #
+
+resource "google_compute_shared_vpc_host_project" "host" {
+  count = var.google_compute_shared_vpc_host_enabled && var.enabled ? 1 : 0
+
+  project = var.host_project_id
+}
+
+resource "google_compute_shared_vpc_service_project" "service1" {
+  count           = var.google_compute_shared_vpc_host_enabled && var.enabled ? 1 : 0
+  host_project    = var.host_project_id
+  service_project = var.service_project_id
 }

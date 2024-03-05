@@ -89,3 +89,27 @@ variable "module_depends_on" {
   description = "(Optional) A list of external resources the module depends_on. Default is '[]'."
 
 }
+
+# shared_vpc_variable #
+
+variable "host_project_id" {
+  description = "Google Cloud Project ID"
+}
+
+variable "service_project_id" {
+  description = "Project ID of the service project"
+}
+
+variable "enabled" {
+  type        = bool
+  default     = true
+  description = "Set to false to prevent the module from creating any resources."
+}
+
+variable "google_compute_shared_vpc_host_enabled" {
+  type        = bool
+  default     = true
+  description = "Set to false to disable the creation of Google Compute Engine shared VPC host project."
+}
+
+

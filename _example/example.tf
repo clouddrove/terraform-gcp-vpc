@@ -17,13 +17,13 @@ module "vpc" {
   label_order = var.label_order
 
   google_compute_network_enabled         = true
-  project_id                             = "dev-env-3b53"
+  project_id                             = "clouddrove-1"
   auto_create_subnetworks                = false
   routing_mode                           = "REGIONAL"
   mtu                                    = 1460
   delete_default_routes_on_create        = true
   enable_ula_internal_ipv6               = false
   google_compute_shared_vpc_host_enabled = true
-  host_project_id                        = "dev-env-3b53"
-  service_project_id                     = "bamboo-analyst-416214"
+  host_project_id                        = "clouddrove-1"
+  service_project_id                     = "clouddrove-2"
 }

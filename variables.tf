@@ -1,3 +1,6 @@
+#-------------------------------------------------------------------------------------
+               # Module_labels_variable #
+#-------------------------------------------------------------------------------------
 variable "environment" {
   type        = string
   default     = "dev"
@@ -22,6 +25,10 @@ variable "name" {
   description = "(Optional) The name of the VPC. The name will be used to prefix all associacted resources also. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression \"[a-z]([-a-z0-9]*[a-z0-9])?\" which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. Default is \"main\"."
 
 }
+
+#---------------------------------------------------------------------------------------------------
+                # Google_Compute_Network_(VPC)_variable #
+#---------------------------------------------------------------------------------------------------
 
 variable "google_compute_network_enabled" {
   type    = bool
@@ -90,7 +97,9 @@ variable "module_depends_on" {
 
 }
 
-# shared_vpc_variable #
+#---------------------------------------------------------------------------------------------------------
+                        # shared_vpc_variable #
+#----------------------------------------------------------------------------------------------------------
 
 variable "host_project_id" {
   description = "Google Cloud Project ID"

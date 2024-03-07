@@ -9,7 +9,4 @@ jobs:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.2
     with:
       working_directory: './_example/'
-  complete:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.2
-    with:
-      working_directory: './_example/'
+ 

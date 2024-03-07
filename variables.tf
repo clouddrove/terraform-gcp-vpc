@@ -105,7 +105,7 @@ variable "module_depends_on" {
 
 variable "host_project_id" {
   description = "Google Cloud Project ID"
-
+  type        = string
 }
 
 variable "service_project_id" {

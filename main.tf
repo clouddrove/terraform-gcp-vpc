@@ -1,3 +1,13 @@
+
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = ">= 3.0.0"
+    }
+  }
+}
+
 #-------------------------------------------------------------------------------
 # Module "labels" Configuration #
 #-------------------------------------------------------------------------------
@@ -40,6 +50,7 @@ resource "google_compute_shared_vpc_host_project" "host" {
   count   = var.google_compute_shared_vpc_host_enabled && var.enabled ? 1 : 0
   project = var.host_project_id
 }
+
 
 resource "google_compute_shared_vpc_service_project" "service1" {
   count           = var.google_compute_shared_vpc_host_enabled && var.enabled ? 1 : 0

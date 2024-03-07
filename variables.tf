@@ -15,7 +15,7 @@ variable "label_order" {
 
 variable "project_id" {
   type        = string
-  default     = null
+  default     = ""
   description = "(Optional) The ID of the project in which the resource belongs. If it is not set, the provider project is used."
 }
 
@@ -111,7 +111,7 @@ variable "host_project_id" {
 variable "service_project_id" {
   description = "Project ID of the service project"
   type        = string
-  default     = []
+  default     = "clouddrove-2"
 }
 
 variable "enabled" {

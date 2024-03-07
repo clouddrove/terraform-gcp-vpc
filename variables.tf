@@ -33,7 +33,9 @@ variable "name" {
 variable "google_compute_network_enabled" {
   type    = bool
   default = true
+  description = "Specifies whether the Google Compute Engine network should be enabled"
 }
+
 
 variable "description" {
   type        = string
@@ -103,10 +105,13 @@ variable "module_depends_on" {
 
 variable "host_project_id" {
   description = "Google Cloud Project ID"
+  
 }
 
 variable "service_project_id" {
   description = "Project ID of the service project"
+  type        = string
+  default     = []
 }
 
 variable "enabled" {

@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-                # Module "labels" Configuration #
+# Module "labels" Configuration #
 #-------------------------------------------------------------------------------
 
 module "labels" {
@@ -12,7 +12,7 @@ module "labels" {
 }
 
 #------------------------------------------------------------------------------------------
-               # Google_Compute_Network_(VPC)_Configuration #
+# Google_Compute_Network_(VPC)_Configuration #
 #-------------------------------------------------------------------------------------------
 
 resource "google_compute_network" "vpc" {
@@ -33,7 +33,7 @@ resource "google_compute_network" "vpc" {
 }
 
 #-------------------------------------------------------------------------------
-              # shared_vpc_Configuration  #
+# shared_vpc_Configuration  #
 #-------------------------------------------------------------------------------
 
 resource "google_compute_shared_vpc_host_project" "host" {

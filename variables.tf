@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------------
-               # Module_labels_variable #
+# Module_labels_variable #
 #-------------------------------------------------------------------------------------
 variable "environment" {
   type        = string
@@ -27,12 +27,12 @@ variable "name" {
 }
 
 #---------------------------------------------------------------------------------------------------
-                # Google_Compute_Network_(VPC)_variable #
+# Google_Compute_Network_(VPC)_variable #
 #---------------------------------------------------------------------------------------------------
 
 variable "google_compute_network_enabled" {
-  type    = bool
-  default = true
+  type        = bool
+  default     = true
   description = "Specifies whether the Google Compute Engine network should be enabled"
 }
 
@@ -100,12 +100,12 @@ variable "module_depends_on" {
 }
 
 #---------------------------------------------------------------------------------------------------------
-                        # shared_vpc_variable #
+# shared_vpc_variable #
 #----------------------------------------------------------------------------------------------------------
 
 variable "host_project_id" {
   description = "Google Cloud Project ID"
-  
+
 }
 
 variable "service_project_id" {

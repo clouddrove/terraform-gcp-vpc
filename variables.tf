@@ -111,7 +111,7 @@ variable "host_project_id" {
 variable "service_project_id" {
   description = "Project ID of the service project"
   type        = string
-  default     = "clouddrove-2"
+  default     = ""
 }
 
 variable "enabled" {

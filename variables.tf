@@ -1,3 +1,6 @@
+#-------------------------------------------------------------------------------------
+# Module_labels_variable #
+#-------------------------------------------------------------------------------------
 variable "environment" {
   type        = string
   default     = "dev"
@@ -12,7 +15,7 @@ variable "label_order" {
 
 variable "project_id" {
   type        = string
-  default     = null
+  default     = ""
   description = "(Optional) The ID of the project in which the resource belongs. If it is not set, the provider project is used."
 }
 
@@ -23,10 +26,16 @@ variable "name" {
 
 }
 
+#---------------------------------------------------------------------------------------------------
+# Google_Compute_Network_(VPC)_variable #
+#---------------------------------------------------------------------------------------------------
+
 variable "google_compute_network_enabled" {
-  type    = bool
-  default = true
+  type        = bool
+  default     = true
+  description = "Specifies whether the Google Compute Engine network should be enabled"
 }
+
 
 variable "description" {
   type        = string
@@ -89,3 +98,33 @@ variable "module_depends_on" {
   description = "(Optional) A list of external resources the module depends_on. Default is '[]'."
 
 }
+
+#---------------------------------------------------------------------------------------------------------
+# shared_vpc_variable #
+#----------------------------------------------------------------------------------------------------------
+
+variable "host_project_id" {
+  description = "Google Cloud Project ID"
+  type        = string
+  default     = ""
+}
+
+variable "service_project_id" {
+  description = "Project ID of the service project"
+  type        = string
+  default     = ""
+}
+
+variable "enabled" {
+  type        = bool
+  default     = true
+  description = "Set to false to prevent the module from creating any resources."
+}
+
+variable "google_compute_shared_vpc_host_enabled" {
+  type        = bool
+  default     = true
+  description = "Set to false to disable the creation of Google Compute Engine shared VPC host project."
+}
+
+

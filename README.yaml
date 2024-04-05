@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name : Terraform gcp vpc
+name : Terraform GCP VPC
 
 # License of this project
 license: "APACHE"

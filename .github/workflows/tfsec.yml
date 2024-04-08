@@ -8,4 +8,4 @@ jobs:
     uses: clouddrove/github-shared-workflows/.github/workflows/tfsec.yml@1.2.2
     secrets: inherit
     with:
-      working_directory: './_examples/'
+      working_directory: './examples/'

@@ -70,7 +70,7 @@ This table contains both Prerequisites and Providers:
 
 **IMPORTANT:** Since the master branch used in source varies based on new modifications, we recommend using the [release versions](https://github.com/clouddrove/terraform-gcp-vpc/releases).
 
-📌 For additional usage examples, check the complete list under [`_examples/`](./_examples) directory.
+📌 For additional usage examples, check the complete list under [`_examples/`](./examples) directory.
 
 
 

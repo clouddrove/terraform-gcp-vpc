@@ -53,7 +53,7 @@ resource "google_compute_shared_vpc_service_project" "service1" {
 #-------------------------------------------------------------------------------
 
 resource "google_compute_global_address" "private_ip_alloc" {
-  count         = length(var.private_ip_alloc_name)
+  count         = var.enable_private_ip_alloc ? length(var.private_ip_alloc_name) : 0
   name          = var.private_ip_alloc_name[count.index]
   purpose       = "VPC_PEERING"
   address_type  = "INTERNAL"

@@ -27,7 +27,7 @@ module "vpc" {
   host_project_id                        = "clouddrove-1"
   service_project_id                     = "clouddrove-2"
   enable_private_ip_alloc                = true
-  private_ip_alloc_name                  = ["alloc_IP1", "alloc_IP2"]
+  private_ip_alloc_name                  = ["alloc-ip1", "alloc-ip2"]
   prefix_length                          = [16, 24]
   enable_service_networking              = true
 }

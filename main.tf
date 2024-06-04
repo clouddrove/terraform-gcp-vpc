@@ -42,10 +42,33 @@ resource "google_compute_shared_vpc_host_project" "host" {
   project = var.host_project_id
 }
 
-
 resource "google_compute_shared_vpc_service_project" "service1" {
   count           = var.google_compute_shared_vpc_host_enabled && var.enabled ? 1 : 0
   host_project    = google_compute_shared_vpc_host_project.host[count.index].project
   service_project = var.service_project_id
+}
+
+#-------------------------------------------------------------------------------
+# Private_IP_Configuration  #
+#-------------------------------------------------------------------------------
+
+resource "google_compute_global_address" "private_ip_alloc" {
+  count         = length(var.private_ip_alloc_name)
+  name          = var.private_ip_alloc_name[count.index]
+  purpose       = "VPC_PEERING"
+  address_type  = "INTERNAL"
+  prefix_length = var.prefix_length[count.index]
+  network       = google_compute_network.vpc[0].self_link
+}
+
+#-------------------------------------------------------------------------------
+# Private_connection_service_Configuration  #
+#-------------------------------------------------------------------------------
+
+resource "google_service_networking_connection" "default" {
+  count                   = var.enable_service_networking ? 1 : 0
+  network                 = google_compute_network.vpc[0].self_link
+  service                 = "servicenetworking.googleapis.com"
+  reserved_peering_ranges = var.enable_service_networking ? [google_compute_global_address.private_ip_alloc[0].name] : []
 }
 

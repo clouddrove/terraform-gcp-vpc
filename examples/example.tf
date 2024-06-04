@@ -23,7 +23,11 @@ module "vpc" {
   mtu                                    = 1460
   delete_default_routes_on_create        = true
   enable_ula_internal_ipv6               = false
-  google_compute_shared_vpc_host_enabled = true
+  google_compute_shared_vpc_host_enabled = false
   host_project_id                        = "clouddrove-1"
   service_project_id                     = "clouddrove-2"
+  enable_private_ip_alloc                = true
+  private_ip_alloc_name                  = ["alloc_IP1", "alloc_IP2"]
+  prefix_length                          = [16, 24]
+  enable_service_networking              = true
 }

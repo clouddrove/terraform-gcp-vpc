@@ -127,4 +127,31 @@ variable "google_compute_shared_vpc_host_enabled" {
   description = "Set to false to disable the creation of Google Compute Engine shared VPC host project."
 }
 
+#---------------------------------------------------------------------------------------------------------
+# private_IP_&_service_networking_variable #
+#----------------------------------------------------------------------------------------------------------
+
+variable "enable_private_ip_alloc" {
+  type        = bool
+  default     = true
+  description = "Enable allocation of a private IP address range for VPC peering."
+}
+
+variable "private_ip_alloc_name" {
+  description = "List of names for the private IP allocations"
+  type        = list(string)
+}
+
+variable "prefix_length" {
+  description = "List of prefix lengths for the private IP allocations"
+  type        = list(number)
+}
+variable "enable_service_networking" {
+  description = "Whether to enable service networking"
+  type        = bool
+  default     = true
+}
+
+
+
 

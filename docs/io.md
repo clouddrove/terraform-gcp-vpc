@@ -5,6 +5,8 @@
 | auto\_create\_subnetworks | (Optional) When set to true, the network is created in 'auto subnet mode' and it will create a subnet for each region automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in 'custom subnet mode' so the user can explicitly connect subnetwork resources. Default is 'false'. | `bool` | `false` | no |
 | delete\_default\_routes\_on\_create | (Optional) If set to true, ensure that all routes within the network specified whose names begin with 'default-route' and with a next hop of 'default-internet-gateway' are deleted. | `bool` | `false` | no |
 | description | (Optional) An optional description of the VPC. The resource must be recreated to modify this field.Default is ''. | `string` | `""` | no |
+| enable\_private\_ip\_alloc | Enable allocation of a private IP address range for VPC peering. | `bool` | `true` | no |
+| enable\_service\_networking | Whether to enable service networking | `bool` | `true` | no |
 | enable\_ula\_internal\_ipv6 | (Optional) Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. | `bool` | `false` | no |
 | enabled | Set to false to prevent the module from creating any resources. | `bool` | `true` | no |
 | environment | Environment name | `string` | `"dev"` | no |
@@ -17,6 +19,8 @@
 | module\_enabled | (Optional) Whether to create resources within the module or not. Default is 'true'. | `bool` | `true` | no |
 | mtu | (Optional) Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. Default is '1460'. | `string` | `1460` | no |
 | name | (Optional) The name of the VPC. The name will be used to prefix all associacted resources also. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression "[a-z]([-a-z0-9]\*[a-z0-9])?" which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. Default is "main". | `string` | `""` | no |
+| prefix\_length | List of prefix lengths for the private IP allocations | `list(number)` | n/a | yes |
+| private\_ip\_alloc\_name | List of names for the private IP allocations | `list(string)` | n/a | yes |
 | project\_id | (Optional) The ID of the project in which the resource belongs. If it is not set, the provider project is used. | `string` | `""` | no |
 | routing\_mode | (Optional) The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will advertise routes with all subnetworks of this network, across regions. Possible values are 'REGIONAL' and 'GLOBAL'. Default is 'REGIONAL'. | `string` | `"REGIONAL"` | no |
 | service\_project\_id | Project ID of the service project | `string` | `""` | no |

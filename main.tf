@@ -71,4 +71,3 @@ resource "google_service_networking_connection" "default" {
   service                 = "servicenetworking.googleapis.com"
   reserved_peering_ranges = var.enable_service_networking ? [google_compute_global_address.private_ip_alloc[0].name] : []
 }
-

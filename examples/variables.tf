@@ -38,5 +38,3 @@ variable "gcp_zone" {
   default     = "Europe-west3-c"
   description = "Google Cloud zone"
 }
-
-

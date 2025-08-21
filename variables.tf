@@ -151,7 +151,3 @@ variable "enable_service_networking" {
   type        = bool
   default     = true
 }
-
-
-
-

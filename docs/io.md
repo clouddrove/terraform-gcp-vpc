@@ -32,3 +32,4 @@
 | host\_project\_id | The ID of the Google Cloud project acting as the host project for the Shared VPC. |
 | service\_project\_id | The ID of the Google Cloud project acting as the service project for the Shared VPC. |
 | vpc\_id | The outputs of the created VPC. |
+

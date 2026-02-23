@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   basic:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.4.1
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@2.0.0
     with:
       working_directory: './examples/'
 

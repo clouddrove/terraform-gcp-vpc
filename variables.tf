@@ -151,4 +151,4 @@ variable "private_ip_alloc_name" {
 variable "prefix_length" {
   description = "List of prefix lengths for the private IP allocations"
   type        = list(number)
-} 
+}

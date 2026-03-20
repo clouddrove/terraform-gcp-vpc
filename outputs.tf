@@ -21,4 +21,3 @@ output "service_project_id" {
   value       = google_compute_shared_vpc_service_project.service1[*].service_project
   description = "The ID of the Google Cloud project acting as the service project for the Shared VPC."
 }
-

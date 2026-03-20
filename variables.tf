@@ -137,15 +137,6 @@ variable "enable_private_ip_alloc" {
   description = "Enable allocation of a private IP address range for VPC peering."
 }
 
-variable "private_ip_alloc_name" {
-  description = "List of names for the private IP allocations"
-  type        = list(string)
-}
-
-variable "prefix_length" {
-  description = "List of prefix lengths for the private IP allocations"
-  type        = list(number)
-}
 variable "enable_service_networking" {
   description = "Whether to enable service networking"
   type        = bool
@@ -160,9 +151,4 @@ variable "private_ip_alloc_name" {
 variable "prefix_length" {
   description = "List of prefix lengths for the private IP allocations"
   type        = list(number)
-}
-variable "enable_service_networking" {
-  description = "Whether to enable service networking"
-  type        = bool
-  default     = true
-}
+} 

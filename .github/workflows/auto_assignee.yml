@@ -11,4 +11,4 @@ jobs:
     secrets:
       GITHUB: ${{ secrets.GITHUB }}
     with:
-      assignees: 'clouddrove-ci'
+      assignees: 'clouddrove-ci'  

@@ -2,6 +2,8 @@ name: tfsec
 permissions: write-all
 on:
   pull_request:
+  push:
+    branches: [ feat/update ]
   workflow_dispatch:
 jobs:
   tfsec:

@@ -1,12 +1,12 @@
 name: tf-checks
 on:
   push:
-    branches: [ master ]
+    branches: [ feat/update ]
   pull_request:
   workflow_dispatch:
 jobs:
   basic:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@2.0.0
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2.1.5
     with:
       provider: none
       enable_version_check: true

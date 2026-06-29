@@ -31,3 +31,4 @@ module "vpc" {
   prefix_length                          = [16, 24]
   enable_service_networking              = true
 }
+

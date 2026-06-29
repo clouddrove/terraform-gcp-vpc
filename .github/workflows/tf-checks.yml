@@ -10,7 +10,7 @@ jobs:
     secrets: inherit
     with:
       provider: none
-      working_directory: './examples/' 
+      working_directory: './examples/'  
 
  
 

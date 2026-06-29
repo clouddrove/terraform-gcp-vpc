@@ -2,11 +2,13 @@ name: tfsec
 permissions: write-all
 on:
   pull_request:
-  push:
-    branches: [ feat/update ]
+    paths:
+      - '**/*.tf'
+      - '*.tf'
   workflow_dispatch:
 jobs:
   tfsec:
+    if: github.actor != 'dependabot[bot]'
     uses: clouddrove/github-shared-workflows/.github/workflows/security-tfsec.yml@v2
     secrets: inherit
     with:

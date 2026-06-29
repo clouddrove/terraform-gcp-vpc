@@ -7,10 +7,11 @@ on:
 jobs:
   basic:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2.1.5
+    secrets: inherit
     with:
       provider: none
       working_directory: './examples/' 
-    secrets:
-      GITHUB: ${{ secrets.GITHUB }}
+    # secrets:
+    #   GITHUB: ${{ secrets.GITHUB }}
  
 

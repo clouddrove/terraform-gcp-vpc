@@ -9,7 +9,8 @@ jobs:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2.1.5
     with:
       provider: none
- #     enable_version_check: true
       working_directory: './examples/' 
+    secrets:
+      GITHUB: ${{ secrets.GITHUB }}
  
 

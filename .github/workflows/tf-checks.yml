@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   basic:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2.1.6
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2.1.7
     secrets: inherit
     with:
       provider: none
